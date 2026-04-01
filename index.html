@@ -629,41 +629,43 @@ const projectsE5 = [
   {
     id:'e5-1', emoji:'🔧', bg:'#0a1a2e', tag:'Infrastructure · E5',
     title:'Mise en place d\'un réseau d\'entreprise',
-    summary:'Conception et déploiement d\'une infrastructure réseau complète sous Cisco Packet Tracer pour une PME fictive.',
+    summary:'Conception et déploiement d\'une infrastructure réseau complète pour la Start-Up VESTIMs.',
+    link:'file:///C:/GIT%20hub/E5_SituationProfessionnelle_VESTIMs.pdf',
     details:{
-      desc:'Simulation d\'une infrastructure réseau LAN/WAN pour une entreprise de 50 postes. Segmentation par services, sécurisation des accès et supervision.',
+      desc:'Conceptions d\'une infrastructure réseau VLAN/WAN pour une entreprise. Segmentation par services, sécurisation des accès et supervision.',
       steps:[
         'Analyse du cahier des charges et schéma d\'adressage IP',
-        'Configuration des VLANs (RH, Compta, Informatique, Direction)',
-        'Routage inter-VLAN avec router-on-a-stick',
-        'Serveur DHCP centralisé et DNS interne',
-        'ACL pour filtrer les flux entre VLANs',
+        'Configuration des VLANs (Administration, Production)',
+        'Encapsulations des VLANs sur PFsense (Routeur)',
+        'Mise en place du mode SSH',
+        '',
       ]
     },
-    techs:['Cisco','VLAN','DHCP','ACL','Packet Tracer']
+    techs:['Cisco','VLANs','PFsense','FAI','SSH']
   },
   {
-    id:'e5-2', emoji:'🛡️', bg:'#0a1f14', tag:'Sécurité · E5',
-    title:'Sécurisation d\'un serveur Linux',
-    summary:'Déploiement et durcissement d\'un serveur Debian : gestion des droits, SSH, pare-feu iptables et serveur web Apache + SSL.',
+    id:'e5-2', emoji:'🔧', bg:'#0a1f14', tag:'Infrastructure · E5',
+    title:'Mise en place d\'un réseau d\'entreprise',
+    summary:'Conception et déploiement d\'une infrastructure réseau complète pour la Start-Up IMPOPstack.',
     details:{
-      desc:'Mise en production d\'un serveur web sécurisé sur Debian 12. Objectif : réduire la surface d\'attaque et garantir la disponibilité du service.',
+      desc:'Conceptions d\'une infrastructure réseau VLAN/WAN pour une entreprise. Segmentation par services, sécurisation des accès et supervision + DHCP.',
       steps:[
-        'Installation Debian minimale et mises à jour',
-        'Création d\'utilisateurs et gestion des groupes/droits',
+        'Analyse du cahier des charges et schéma d\'adressage IP',
+        'Configuration des VLANs (Administration, Production)',
         'Configuration SSH sans mot de passe (clé publique)',
-        'Règles iptables : DROP by default, ouverture HTTP/HTTPS/SSH',
-        'Déploiement Apache2 + certificat SSL Let\'s Encrypt',
+        'Encapsulations des VLANs sur PFsense (Routeur)',
+        'Mise en place du mode SSH',
+        'Mise en place des Scoop DHCP (Pfsense)',
       ]
     },
-    techs:['Linux','SSH','iptables','Apache','SSL']
+    techs:['Cisco','SSH','DHCP','VLANs','Pfsense','FAI']
   },
   {
-    id:'e5-3', emoji:'🪟', bg:'#130a26', tag:'Windows Server · E5',
-    title:'Déploiement Active Directory & GPO',
-    summary:'Mise en place d\'un domaine Windows Server 2019 avec Active Directory, GPO, profils itinérants et DNS/DHCP intégré.',
+    id:'e5-3', emoji:'🔧', bg:'#130a26', tag:'Infrastructure · E5',
+    title:'Mise en place d\'un réseau d\'entreprise',
+    summary:'Conception et déploiement d\'une infrastructure réseau complète pour la Start-Up XPSTY',
     details:{
-      desc:'Infrastructure Windows d\'entreprise pour 30 utilisateurs répartis en 3 OUs. Gestion centralisée des droits et politiques via GPO.',
+      desc:'Conceptions d\'une infrastructure réseau VLAN/WAN pour une entreprise. Segmentation par services, sécurisation des accès et supervision + DHCP + HSRP',
       steps:[
         'Installation Windows Server 2019 et promotion en contrôleur de domaine',
         'Création des OUs : Direction, Techniciens, Stagiaires',
@@ -672,13 +674,10 @@ const projectsE5 = [
         'Profils itinérants sur partage réseau sécurisé',
       ]
     },
-    techs:['Windows Server 2019','Active Directory','GPO','DNS','DHCP']
+    techs:['SSH','VLANs','Pfsense','FAI','DHCP','HSRP','Cisco']
   },
-];
-
-const projectsE6 = [
   {
-    id:'e6-1', emoji:'🌐', bg:'#0d1525', tag:'Web Front-End · E6',
+    id:'e5-4', emoji:'🌐', bg:'#0d1525', tag:'Web Front-End · E5',
     title:'Portfolio Personnel (SPA)',
     summary:'Site portfolio mono-page développé entièrement en HTML, CSS et JavaScript pur, sans framework.',
     details:{
@@ -693,37 +692,24 @@ const projectsE6 = [
     },
     techs:['HTML5','CSS3','JavaScript','GitHub Pages']
   },
+];
+
+const projectsE6 = [
   {
-    id:'e6-2', emoji:'🐍', bg:'#111a0a', tag:'Python · Automatisation · E6',
-    title:'Scanner Réseau Python',
-    summary:'Script Python pour auditer un réseau local : ping sweep, ports ouverts, inventaire des machines et export CSV.',
+    id:'e6-1', emoji:'🔧', bg:'#0d1525', tag:'Web Front-End · E6',
+    title:'Mise en place d\'un réseau segmentée et sécuriser',
+    summary:'Déploiement d\'une infrastructure réseau en physique pour une entreprise.',
     details:{
-      desc:'Outil CLI de découverte et d\'audit réseau développé en Python. Permet de cartographier rapidement un réseau local et de détecter les services exposés.',
+      desc:'Conception et développement d\'un portfolio professionnel responsive. Navigation SPA sans rechargement, animations CSS et design system cohérent.',
       steps:[
-        'Ping sweep pour identifier les hôtes actifs',
-        'Scan de ports TCP courants (22, 80, 443, 3389, etc.)',
-        'Résolution DNS inverse des adresses détectées',
-        'Génération d\'un rapport CSV horodaté',
-        'Interface CLI avec argparse et gestion des exceptions',
+        'Maquette sur papier puis maquette numérique (Figma)',
+        'Architecture HTML5 sémantique et CSS Variables',
+        'Système de navigation SPA en JavaScript vanilla',
+        'Animations CSS : fadeIn, compteurs, barres de progression',
+        'Déploiement GitHub Pages',
       ]
     },
-    techs:['Python','Socket','argparse','CSV','CLI']
-  },
-  {
-    id:'e6-3', emoji:'🗺️', bg:'#0a1020', tag:'Algorithmique · NSI · E6',
-    title:'Algorithmes de Graphes',
-    summary:'Implémentation Python de Dijkstra et BFS pour la recherche de chemin minimal, avec visualisation ASCII.',
-    details:{
-      desc:'Projet NSI approfondi sur les algorithmes de graphes. Implémentation from scratch des algorithmes de parcours et recherche de plus court chemin.',
-      steps:[
-        'Modélisation d\'un graphe pondéré en Python (dict d\'adjacence)',
-        'Algorithme BFS (parcours en largeur) et affichage des niveaux',
-        'Algorithme de Dijkstra avec file de priorité (heapq)',
-        'Visualisation ASCII du graphe et du chemin trouvé',
-        'Tests unitaires sur différents cas (graphe connexe, nœuds isolés)',
-      ]
-    },
-    techs:['Python','Dijkstra','BFS','heapq','Tests']
+    techs:['HTML5','CSS3','JavaScript','GitHub Pages']
   },
 ];
 
@@ -879,7 +865,7 @@ function buildProjectCard(p, i) {
             ${p.details.steps.map(s => `<li>${s}</li>`).join('')}
           </ul>
           <div class="detail-btns">
-            <a class="btn-sm solid"   href="#" onclick="return false">GitHub</a>
+            <a class="btn-sm solid"   href="${p.link || '#'}" target="_blank" rel="noreferrer">${p.link ? 'Voir le PDF' : 'GitHub'}</a>
             <a class="btn-sm outline" href="#" onclick="return false">Documentation</a>
           </div>
         </div>
