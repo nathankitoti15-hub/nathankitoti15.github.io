@@ -284,6 +284,22 @@ nav {
 .veille-tag.t-ia    { background: rgba(0,255,163,.08); border: 1px solid rgba(0,255,163,.2);  color: var(--accent3); }
 .veille-tag.t-cloud { background: rgba(251,191,36,.08);border: 1px solid rgba(251,191,36,.2); color: #fbbf24; }
 
+/* Veille featured */
+.veille-card.featured {
+  border-color: rgba(0,212,255,.35);
+  background: linear-gradient(135deg, var(--surface), rgba(0,212,255,.04));
+  grid-column: 1 / -1;
+}
+.veille-card.featured .veille-body { font-size: .83rem; }
+.veille-featured-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: .6rem; text-transform: uppercase;
+  letter-spacing: .1em; background: rgba(0,212,255,.12);
+  border: 1px solid rgba(0,212,255,.3); color: var(--accent);
+  padding: 3px 10px; border-radius: 100px; margin-bottom: 6px;
+}
+.veille-featured-badge::before { content:'★'; font-size:.55rem; }
+
 /* Veille intro box */
 .veille-intro {
   background: var(--surface); border: 1px solid var(--border);
@@ -369,7 +385,7 @@ footer { text-align:center; padding:22px 20px; border-top:1px solid var(--border
 <div class="page active" id="page-home">
   <div class="hero">
     <div class="hero-text">
-      <div class="hero-badge"><span class="dot"></span>DISPONIBLE — BTS SIO SISR · Promo 2026</div>
+      <div class="hero-badge"><span class="dot"></span>EN ALTERNANCE — BTS SIO SISR · 2 ans · Promo 2026</div>
       <h1>Nathan <em>KITOTI</em><br>NZIMBU NZUZI</h1>
       <p class="hero-sub">// Admin Systèmes &amp; Réseaux · Étudiant IT · Paris</p>
       <p class="hero-desc">
@@ -406,7 +422,7 @@ footer { text-align:center; padding:22px 20px; border-top:1px solid var(--border
       </div>
       <div class="status-bar">
         <span class="status-dot"></span>
-        <span class="status-text">OPEN TO WORK · Stage / Alternance</span>
+        <span class="status-text">EN ALTERNANCE · Contrat 2 ans · SIO SISR</span>
       </div>
     </div>
   </div>
@@ -510,16 +526,16 @@ footer { text-align:center; padding:22px 20px; border-top:1px solid var(--border
 <div class="page" id="page-contact">
   <div class="page-header">
     <h2>Me <span>Contacter</span></h2>
-    <p>// Disponible pour un stage ou une alternance — réponse sous 48h</p>
+    <p>// Actuellement en alternance — réponse sous 48h</p>
   </div>
   <div class="contact-layout">
     <div class="contact-info">
       <h3>Travaillons ensemble</h3>
-      <p>Étudiant en BTS SIO SISR, je suis à la recherche d'un stage ou d'une alternance en administration systèmes et réseaux. Motivé, curieux et prêt à m'investir pleinement.</p>
+      <p>Actuellement en alternance dans le cadre de mon BTS SIO SISR (contrat de 2 ans), je développe mes compétences en administration systèmes et réseaux en milieu professionnel. N'hésite pas à me contacter pour toute collaboration ou question technique.</p>
       <div class="contact-items">
         <div class="contact-item">
           <div class="c-icon">✉️</div>
-          <div><div class="c-label">Email</div><div class="c-value">nathankitoi15@gmail.com</div></div>
+          <div><div class="c-label">Email</div><div class="c-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e38d82978b828d888a978c8ad2d6a3848e828a8fcd808c8e">[email&#160;protected]</a></div></div>
         </div>
         <div class="contact-item">
           <div class="c-icon">📍</div>
@@ -531,7 +547,7 @@ footer { text-align:center; padding:22px 20px; border-top:1px solid var(--border
         </div>
         <div class="contact-item">
           <div class="c-icon">💼</div>
-          <div><div class="c-label">Disponibilité</div><div class="c-value">Stage / Alternance — Immédiat</div></div>
+          <div><div class="c-label">Disponibilité</div><div class="c-value">En alternance — Contrat 2 ans</div></div>
         </div>
       </div>
       <div class="social-row">
@@ -571,7 +587,7 @@ footer { text-align:center; padding:22px 20px; border-top:1px solid var(--border
 
 <div class="toast" id="toast">✅ &nbsp;Message reçu ! Je te réponds sous 48h.</div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ════════════ NAVIGATION ════════════ */
 function showPage(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -718,6 +734,15 @@ const projectsE6 = [
 /* ════════════ DATA — VEILLE ════════════ */
 const veilles = [
   {
+    cat:'net', icon:'📶', iconClass:'net',
+    title:'Wi-Fi 7 (802.11be) : révolution pour les réseaux d\'entreprise',
+    date:'Juin 2024',
+    body:'Le Wi-Fi 7 (IEEE 802.11be) est la nouvelle génération du sans-fil. Son innovation clé est le <strong style="color:var(--white)">Multi-Link Operation (MLO)</strong> : les appareils utilisent simultanément les bandes 2,4 GHz, 5 GHz et 6 GHz, réduisant la latence et améliorant la résilience face aux interférences.<br><br><strong style="color:var(--white)">Performances :</strong> débit théorique de <strong style="color:var(--accent)">46 Gbps</strong> (contre 9,6 Gbps pour le Wi-Fi 6), canaux jusqu\'à 320 MHz et modulation 4096-QAM. L\'OFDMA amélioré gère mieux les environnements très denses (open space, hôpitaux).<br><br><strong style="color:var(--white)">Impact SISR :</strong> remplacement des AP, reconfiguration des contrôleurs WLC pour le MLO, révision des politiques QoS. Cisco Catalyst 9166, Aruba 730 et Netgear WAX640 sont déjà compatibles.<br><br><strong style="color:var(--white)">Sécurité :</strong> WPA3 obligatoire maintenu. Les attaques de couche 2 (evil twin, deauth) restent d\'actualité — WIDS et segmentation réseau restent indispensables.<br><br><strong style="color:var(--white)">Mon analyse :</strong> la migration vers le Wi-Fi 7 implique une refonte des plans d\'adressage sans fil, de la gestion des SSID et une formation aux nouveaux outils de supervision. À intégrer dans tout projet d\'infrastructure réseau entreprise.',
+    source:'IEEE 802.11be / Cisco Blog / Wi-Fi Alliance',
+    tags:['t-net','t-sys'],
+    tagLabels:['Réseaux','Infrastructure']
+  },
+  {
     cat:'cyber', icon:'🛡️', iconClass:'cyber',
     title:'Vulnérabilité critique dans OpenSSH (RegreSSHion)',
     date:'Juillet 2024',
@@ -725,15 +750,6 @@ const veilles = [
     source:'ANSSI / NVD',
     tags:['t-cyber','t-sys'],
     tagLabels:['Sécurité','Système']
-  },
-  {
-    cat:'net', icon:'🔌', iconClass:'net',
-    title:'Wi-Fi 7 (802.11be) : ce qui change pour les réseaux d\'entreprise',
-    date:'Juin 2024',
-    body:'Le Wi-Fi 7 introduit le multi-link operation (MLO), permettant aux appareils d\'utiliser plusieurs bandes simultanément (2.4, 5 et 6 GHz). Le débit théorique atteint 46 Gbps. Pour les réseaux d\'entreprise, cela améliore la densité de connexions et réduit la latence, mais nécessite une mise à niveau des points d\'accès.',
-    source:'Cisco Blog / IEEE',
-    tags:['t-net'],
-    tagLabels:['Réseaux']
   },
   {
     cat:'cyber', icon:'🔐', iconClass:'cyber',
@@ -906,12 +922,16 @@ function renderVeille(filter = 'all') {
   const grid = document.getElementById('veille-grid');
   if (!grid) return;
   const list = filter === 'all' ? veilles : veilles.filter(v => v.cat === filter);
-  grid.innerHTML = list.map((v,i) => `
-    <div class="veille-card" style="animation:fadeUp .3s ${i*.06}s ease both">
+  const catLabel = c => c === 'cyber' ? 'Cybersécurité' : c === 'net' ? 'Réseaux' : c === 'sys' ? 'Systèmes' : 'IA & Tech';
+  grid.innerHTML = list.map((v,i) => {
+    const isFeatured = i === 0 && filter === 'all';
+    return `
+    <div class="veille-card${isFeatured ? ' featured' : ''}" style="animation:fadeUp .3s ${i*.06}s ease both">
       <div class="veille-card-top">
         <div class="veille-icon ${v.iconClass}">${v.icon}</div>
         <div class="veille-meta">
-          <div class="veille-cat">${v.cat === 'cyber' ? 'Cybersécurité' : v.cat === 'net' ? 'Réseaux' : v.cat === 'sys' ? 'Systèmes' : 'IA & Tech'}</div>
+          ${isFeatured ? '<div class="veille-featured-badge">Veille principale</div>' : ''}
+          <div class="veille-cat">${catLabel(v.cat)}</div>
           <div class="veille-title">${v.title}</div>
           <div class="veille-date">${v.date}</div>
         </div>
@@ -921,7 +941,8 @@ function renderVeille(filter = 'all') {
         <span class="veille-source">Source : ${v.source}</span>
         <div class="veille-tag-row">${v.tags.map((t,j) => `<span class="veille-tag ${t}">${v.tagLabels[j]}</span>`).join('')}</div>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 function filterVeille(cat, btn) {
@@ -966,12 +987,9 @@ function handleSubmit() {
       btn.disabled = false; btn.classList.remove('sent');
       document.getElementById('btn-text').textContent = 'Envoyer le message';
       document.getElementById('btn-arrow').textContent = '→';
-    }, 2600);
-  }, 950);
+    }, 5000);
+  }, 2000);
 }
-
-/* ════════════ INIT ════════════ */
-renderSkills(); renderCerts(); renderProjectsPage(); renderVeille(); animateCounters();
 </script>
 </body>
 </html>
