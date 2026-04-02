@@ -685,11 +685,11 @@ const projectsE5 = [
     details:{
       desc:'Conceptions d\'une infrastructure réseau VLAN/WAN pour une entreprise. Segmentation par services, sécurisation des accès et supervision + DHCP + HSRP',
       steps:[
-        'Installation Windows Server 2019 et promotion en contrôleur de domaine',
-        'Création des OUs : Direction, Techniciens, Stagiaires',
-        'GPO : restrictions de bureau, redirection dossiers, fond d\'écran imposé',
-        'Serveur DHCP et DNS intégrés au domaine',
-        'Profils itinérants sur partage réseau sécurisé',
+        'Configuration des Switch Cisco 2960 et Routeur Cisco 2911',
+        'Configuration du PfSense en mode Routeur (WAN)',
+        'Configuration du HSRP pour la redondance des routeurs',
+        'Mise en place du DHCP pour les VLANs',
+        'Pfsense accessible en SSH pour l\'administration à distance',
       ]
     },
     techs:['SSH','VLANs','Pfsense','FAI','DHCP','HSRP','Cisco']
@@ -717,14 +717,11 @@ const projectsE6 = [
     id:'e6-1', emoji:'🔧', bg:'#0d1525', tag:'Web Front-End · E6',
     title:'Mise en place d\'un réseau segmentée et sécuriser',
     summary:'Déploiement d\'une infrastructure réseau en physique pour une entreprise.',
+    link:'Fiche_descriptive_SISR_Nathan_(E6).pdf',
     details:{
-      desc:'Conception et développement d\'un portfolio professionnel responsive. Navigation SPA sans rechargement, animations CSS et design system cohérent.',
+      desc:'Conceptions d\'une infrastructure réseau VLAN/WAN pour une entreprise. Segmentation par services, sécurisation des accès et supervision + DHCP + HSRP',
       steps:[
-        'Maquette sur papier puis maquette numérique (Figma)',
-        'Architecture HTML5 sémantique et CSS Variables',
-        'Système de navigation SPA en JavaScript vanilla',
-        'Animations CSS : fadeIn, compteurs, barres de progression',
-        'Déploiement GitHub Pages',
+       
       ]
     },
     techs:['HTML5','CSS3','JavaScript','GitHub Pages']
